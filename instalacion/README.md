@@ -66,7 +66,7 @@ postgres@user:~$ exit
 ```
 Ahora lo que tendremos que hacer será modificar el fichero de configuración de Odoo que se encuentra en `etc/odoo/openerp-server.conf` y modificar el fichero:
 
->![file_openerp_server_conf.png](./images/file_openerp_server_conf.png "Fichero de configuración")
+>![file_openerp_server_conf.png](./images/file_openerp_server_conf.png "Fichero de configuración")  
 > Modificaremos:
 > 1. Descomentaremos **admin_passwd**, también podemos indicar otro password.  
 > 2. Estableceremos **db_host = localhost**.  
