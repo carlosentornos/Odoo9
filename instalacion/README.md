@@ -14,14 +14,14 @@ El asistente nos indica de que hay tres tipos de instalación de los componentes
 2. *Server Only*, si queremos Odoo únicamente.
 3. *Custom*.
 
-Nosotros seleccionaremos "All In One" por lo que necesitaremos 560 MB libres de espacio en disco, una vez que aceptemos y cliquemos en siguiente será el momento de configurar nuestra conexión al motor de la Base de Datos PostgreSQL, por defecto el asistente tendrá los siguientes valores introducidos:
+Nosotros seleccionaremos "All In One" por lo que necesitaremos 560 MB libres de espacio en disco, una vez que aceptemos y cliquemos en siguiente será el momento de configurar nuestra conexión al motor de la Base de Datos PostgreSQL, por defecto el asistente tendrá los siguientes valores introducidos por defecto:
 
-| Campo | Valor |
-|:--------:|:--------:|
-| Hostname | localhost |
-| Port | 5432 |
-| Username | openpg |
-| Password | openpgpwd |
+| Campo | Valor | Descripción |
+|:--------:|:--------:|:---------:|
+| *Hostname* | ***localhost*** | Nombre de la máquina o equipo, puede ser una IP |
+| *Port* | ***5432*** | Puerto establecido por defecto |
+| *Username* | ***openpg*** | Nombre del usuario |
+| *Password* | ***openpgpwd*** | Contraseña del usuario |
 
 ## Referencias
 + [Página Oficial Odoo.](https://www.odoo.com/es_ES/)
