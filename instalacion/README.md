@@ -4,7 +4,7 @@ Desde la página web oficial podemos descargarnos la última versión de Odoo, e
 A continuación mostraremos los diferentes tipos de instalación:
 
 ##1.1.- Mediante Uso de paquetes EXE (MS Windows) / DEB (GNU/Linux).
-###1.1.2.- MS Windows.
+###1.1.1.- MS Windows.
 Descargado el fichero  **"odoo_9.0c.latest.exe"** lo ejecutaremos en modo administrador y seguiremos las instrucciones del asistente de instalación (en inglés y/o francés), aceptaremos los términos y condiciones, y tendremos la siguiente ventana en nuestro escritorio:
 
 ![odoo_install_win_.png](./images/odoo_install_win_.png "Asistente Instalación de Odoo")
@@ -27,7 +27,7 @@ El siguiente paso será indicar la ruta (carpeta) dónde queremos instalar los c
 
 Finalizado el asistente y hemos indicado que **inicie Odoo** *(start odoo)* se abrirá nuestro navegador web por defecto con la siguiente URL `localhost:8069/web/database/selector` y nos mostrará la siguiente página:
 
-![linux_browser_odoo_first_start.png](./images/linux_browser_odoo_first_start.png "Datos para la creación de la empresa")
+>![linux_browser_odoo_first_start.png](./images/linux_browser_odoo_first_start.png "Datos para la creación de la empresa")
 
 Tendremos que rellenar los campos correspondientes para empezar con "nuestra empresa" (que será una base de datos):
 + Indicaremos el nombre de la base de datos, en nuestro ejemplo: "linuxprueba".
@@ -37,13 +37,25 @@ Tendremos que rellenar los campos correspondientes para empezar con "nuestra emp
 + Indicamos el país.
 + También tenemos la posibilidad de cargar datos de demostración o no.
 
-> Una vez rellenados todos los campos, ya podemos crear nuestra empresa, recordemos que la operación durará algunos minutos. 
+Una vez rellenados todos los campos, ya podemos crear nuestra empresa, recordemos que la operación durará algunos minutos. 
 
-Después la ventana del navegador se refrescará y nos mostrará todas las aplicaciones que trae el paquete de instalación:
+>Después la ventana del navegador se refrescará y nos mostrará todas las aplicaciones que trae el paquete de instalación:
 
-![linux_browser_odoo_part2.png](./images/linux_browser_odoo_part2.png "Aplicaciones iniciales disponibles")
+>![linux_browser_odoo_part2.png](./images/linux_browser_odoo_part2.png "Aplicaciones iniciales disponibles")
 
->Donde podremos alternar entre la vista de aplicaciones (actualmente cargada) o configuración
+>Donde podremos alternar entre la vista de aplicaciones (actualmente cargada) o el estado de la configuración en que se encuentra nuestra empresa:
+
+>![linux_browser_odoo_config.png](./images/linux_browser_odoo_config.png "Panel de configuración")
+
+>Podemos ver qué aplicaciones tenemos instaladas, controlde usurios, implementación realizada, compartir con las redes sociales o bien adquirir la versión empresarial. 
+
+###1.1.2.- GNU/Linux.
+Como hemos comentado, también podemos obtener la versión 9c para Ubuntu/Debian mediante paquetes DEB o RPM, nosotros hemos optado por instalar Odoo en Ubuntu, por lo que nos descargaremos el fichero **"odoo_9.0c.latest_all.deb"**, una vez descagado tendremos que cambiar los permisos mediante `>chmod 770 odoo_9.0c.latest_all.deb`
+Para proceder a la instalación necesitaremos el siguiente comando `sudo dpkg -i odoo_9.0c.latest_all.deb` pero el sistema nos indicarán que **hay dependencias incumplidas y no es posible instalar Odoo**. Para arreglar esto, utilizaremos el comando `sudo apt-get -f install` para corregir las dependencias, descargarlas y después instalar Odoo. Después nos mostrará el mensaje de que Odoo está iniciado
+
+> También podremos cambiar el orden:
+> Primero instalar PostgreSQL
+
 
 ## Referencias
 + [Página Oficial Odoo.](https://www.odoo.com/es_ES/)
