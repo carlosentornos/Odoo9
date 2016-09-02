@@ -19,9 +19,15 @@ Nosotros seleccionaremos "All In One" por lo que necesitaremos 560 MB libres de 
 | Campo | Valor | Descripción |
 |:--------:|:--------:|:---------:|
 | *Hostname* | ***localhost*** | Nombre de la máquina o equipo, puede ser una IP |
-| *Port* | ***5432*** | Puerto establecido por defecto |
+| *Port* | ***5432*** | Número de puerto |
 | *Username* | ***openpg*** | Nombre del usuario |
 | *Password* | ***openpgpwd*** | Contraseña del usuario |
+
+El siguiente paso será indicar la ruta (carpeta) dónde queremos instalar los componentes seleccionados, por defecto será en `C:\Archivos de Programa\Odoo 9.0-20160809`. Pulsaremos el botón install para que el asistente proceda a la extracción de los ficheros y su instalación.
+
+Finalizado el asistente y hemos indicado que **inicie Odoo** *(start odoo)* se abrirá nuestro navegador web por defecto con la siguiente URL `localhost:8069/web/database/selector` y nos mostrará la siguiente página:
+
+![](./images/linux_browser_odoo_first_start.png)
 
 ## Referencias
 + [Página Oficial Odoo.](https://www.odoo.com/es_ES/)
