@@ -27,7 +27,23 @@ El siguiente paso será indicar la ruta (carpeta) dónde queremos instalar los c
 
 Finalizado el asistente y hemos indicado que **inicie Odoo** *(start odoo)* se abrirá nuestro navegador web por defecto con la siguiente URL `localhost:8069/web/database/selector` y nos mostrará la siguiente página:
 
-![](./images/linux_browser_odoo_first_start.png)
+![linux_browser_odoo_first_start.png](./images/linux_browser_odoo_first_start.png "Datos para la creación de la empresa")
+
+Tendremos que rellenar los campos correspondientes para empezar con "nuestra empresa" (que será una base de datos):
++ Indicaremos el nombre de la base de datos, en nuestro ejemplo: "linuxprueba".
++ Escribimos el correo electrónico, que bien puede ser una palabra o lo que queramos.
++ Establecemos la contraseña, por ejemplo "abcd".
++ Seleccionamos el idioma deseado.
++ Indicamos el país.
++ También tenemos la posibilidad de cargar datos de demostración o no.
+
+> Una vez rellenados todos los campos, ya podemos crear nuestra empresa, recordemos que la operación durará algunos minutos. 
+
+Después la ventana del navegador se refrescará y nos mostrará todas las aplicaciones que trae el paquete de instalación:
+
+![linux_browser_odoo_part2.png](./images/linux_browser_odoo_part2.png "Aplicaciones iniciales disponibles")
+
+>Donde podremos alternar entre la vista de aplicaciones (actualmente cargada) o configuración
 
 ## Referencias
 + [Página Oficial Odoo.](https://www.odoo.com/es_ES/)
