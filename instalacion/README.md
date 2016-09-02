@@ -50,11 +50,36 @@ Una vez rellenados todos los campos, ya podemos crear nuestra empresa, recordemo
 >Podemos ver qué aplicaciones tenemos instaladas, controlde usurios, implementación realizada, compartir con las redes sociales o bien adquirir la versión empresarial. 
 
 ###1.1.2.- GNU/Linux.
-Como hemos comentado, también podemos obtener la versión 9c para Ubuntu/Debian mediante paquetes DEB o RPM, nosotros hemos optado por instalar Odoo en Ubuntu, por lo que nos descargaremos el fichero **"odoo_9.0c.latest_all.deb"**, una vez descagado tendremos que cambiar los permisos mediante `>chmod 770 odoo_9.0c.latest_all.deb`
-Para proceder a la instalación necesitaremos el siguiente comando `sudo dpkg -i odoo_9.0c.latest_all.deb` pero el sistema nos indicarán que **hay dependencias incumplidas y no es posible instalar Odoo**. Para arreglar esto, utilizaremos el comando `sudo apt-get -f install` para corregir las dependencias, descargarlas y después instalar Odoo. Después nos mostrará el mensaje de que Odoo está iniciado
+Como hemos comentado, también podemos obtener la versión 9c para Ubuntu/Debian mediante paquetes DEB o RPM, nosotros hemos optado por instalar Odoo en Ubuntu, por lo que nos descargaremos el fichero **"odoo_9.0c.latest_all.deb"**, una vez descagado tendremos que cambiar los permisos mediante `chmod 770 odoo_9.0c.latest_all.deb`
+Para proceder a la instalación necesitaremos el siguiente comando `sudo dpkg -i odoo_9.0c.latest_all.deb` pero el sistema nos indicarán que **hay dependencias incumplidas y no es posible instalar Odoo**. 
+Para arreglar esto, utilizaremos el comando `sudo apt-get -f install` para corregir las dependencias, descargarlas y después instalar Odoo. Después nos mostrará el mensaje de que Odoo está iniciado. Entonces si accedemos a nuestro navegador con la URL antes indicada para MS Windows:
+
+>![error_browser_access_odoo.png](./images/error_browser_access_odoo.png "No se inicia Odoo")
+
+No se puede mostrar Odoo porque no tenemos instalado previamente PostgreSQL, así que primero instalaremos el servidor de base de datos utilizando el siguiente comando: `sudo apt-get install postgresql pgadmin3` instalando las versiones 9.3 y 1.18.1 respectivamente.
+
+Ya instalado PostgreSQL y su gestor gráfico, procederemos a crear el usuario **odoo** para poder acceder a PostgreSQL y crear las bases de datos, tablas, etc., necesarias:
+```bash
+mach@user:~$ sudo su - postgres
+postgres@user:~$ createuser --createdb --username postgres --no-createrole --nosuperuser --pwprompt odoo
+postgres@user:~$ exit
+```
+Ahora lo que tendremos que hacer será modificar el fichero de configuración de Odoo que se encuentra en `etc/odoo/openerp-server.conf` y modificar el fichero:
+
+| Parámetros a modificar | ***Fichero openerp-server.conf*** |
+|:--------|--------|
+| admin_passwd, db_host, db_port, db_user, db_password|      ![file_openerp_server_conf.png](./images/file_openerp_server_conf.png "Fichero de configuración")  |
+
+
+
+
 
 > También podremos cambiar el orden:
-> Primero instalar PostgreSQL
+> Primero instalar PostgreSQL y su 
+
+
+RESUMEN PARA LINUX
+
 
 
 ## Referencias
