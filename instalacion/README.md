@@ -66,9 +66,20 @@ postgres@user:~$ exit
 ```
 Ahora lo que tendremos que hacer será modificar el fichero de configuración de Odoo que se encuentra en `etc/odoo/openerp-server.conf` y modificar el fichero:
 
-| Parámetros a modificar | ***Fichero openerp-server.conf*** |
-|:--------|--------|
-| admin_passwd, db_host, db_port, db_user, db_password|      ![file_openerp_server_conf.png](./images/file_openerp_server_conf.png "Fichero de configuración")  |
+>![file_openerp_server_conf.png](./images/file_openerp_server_conf.png "Fichero de configuración")
+> Modificaremos:
+> 1. Descomentaremos **admin_passwd**, también podemos indicar otro password.  
+> 2. Estableceremos **db_host = localhost**.  
+> 3. Indicaremos el puerto en el que escucha PostgreSQL **db_port = 5432**.  
+> 4. El usuario **odoo** ya está puesto por defecto en **db_user**.  
+> 5. Pondremos la contraseña **db_password = 1234**.  
+
+Guardaremos los cambios y reiniciaremos con `sudo service odoo restart`.
+
+
+###asdasd
+
+
 
 
 
