@@ -75,25 +75,38 @@ Ahora lo que tendremos que hacer será modificar el fichero de configuración de
 > 5. Pondremos la contraseña **db_password = 1234**.  
 
 Guardaremos los cambios y reiniciaremos con `sudo service odoo restart`.
+Sólo nos faltará acceder a Odoo mediante nuestro navegador web escribiendo la URL `localhost:8069` y ya podremos crear nuestras bases de datos con sus respectivas aplicaciones (capturas en el apartado anterior con MS Windows).
+
+En el caso de que tengamos varias empresas, desde el navegador podremos seleccionar con cuál queremos trabajar
+
+| Lista de Bases de Datos | Acciones posibles a realizar |
+|--------|--------|
+|![manage_databases_01.png](./images/manage_databases_01.png "Empresas creadas")        |![manage_databases_02.png](./images/manage_databases_02.png "Administrar las BD")        |
+
+###1.1.3.- Otra forma de instalación.
+Directamente desde el [repositorio de Odoo en GitHub][github_odoo]
 
 
-###Otra forma de instalación.
 
 
 
 
 
 
+##1.1.4.- Resumen para GNU / Linux.
 
-> También podremos cambiar el orden:
-> Primero instalar PostgreSQL y su 
-
-
-RESUMEN PARA LINUX
-
+- [x]  **PostgreSQL + pgadmin3:** `sudo apt-get install postgresql pgadmin3`.  
+- [x]  Crear usuario **"odoo"**.  
+- [x]  Editar fichero **"openerp-server.conf"**.  
+- [x]  Instalar las **dependencias** necesarias.  
+- [x]  Modificar **permisos** paquete Odoo: `sudo chmod 770 odoo_9.0c.latest_all.deb`.  
+- [x]  **Instalar Odoo** `sudo dpkg -i odoo_9.0c.latest_all.deb`.  
 
 
 ## Referencias
 + [Página Oficial Odoo.](https://www.odoo.com/es_ES/)
 
 + [Odoo install packages](https://www.odoo.com/documentation/9.0/setup/install.html#setup-install-packaged)
+
+<!-- Enlaces -->
+[github_odoo]:https://github.com/odoo/odoo
