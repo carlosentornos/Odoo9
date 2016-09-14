@@ -64,6 +64,8 @@ mach@user:~$ sudo su - postgres
 postgres@user:~$ createuser --createdb --username postgres --no-createrole --nosuperuser --pwprompt odoo
 postgres@user:~$ exit
 ```
+> **NOTA:** *Podemos poner la contraseña del usuario postgres con* `sudo passwd postgres`. Ya que viene sin contraseña después de la instalación desde los repositorios ubuntu.
+
 Ahora lo que tendremos que hacer será modificar el fichero de configuración de Odoo que se encuentra en `etc/odoo/openerp-server.conf` y modificar el fichero:
 
 >![file_openerp_server_conf.png](./images/file_openerp_server_conf.png "Fichero de configuración")  
@@ -73,6 +75,8 @@ Ahora lo que tendremos que hacer será modificar el fichero de configuración de
 > 3. Indicaremos el puerto en el que escucha PostgreSQL **db_port = 5432**.  
 > 4. El usuario **odoo** ya está puesto por defecto en **db_user**.  
 > 5. Pondremos la contraseña **db_password = 1234**.  
+>
+> *Los puntos 2) y 3) no son necesarios modificarlos, podemos dejarlos como False*.
 
 Guardaremos los cambios y reiniciaremos con `sudo service odoo restart`.
 Sólo nos faltará acceder a Odoo mediante nuestro navegador web escribiendo la URL `localhost:8069` y ya podremos crear nuestras bases de datos con sus respectivas aplicaciones (capturas en el apartado anterior con MS Windows).
@@ -84,7 +88,7 @@ En el caso de que tengamos varias empresas, desde el navegador podremos seleccio
 |![manage_databases_01.png](./images/manage_databases_01.png "Empresas creadas")        |![manage_databases_02.png](./images/manage_databases_02.png "Administrar las BD")        |
 > Recordemos que necesitaremos establecer la contraseña maestra para securizar nuestras bases de datos así como las acciones, sobre todo el borrado.
 
-###1.1.3.- Otra forma de instalación.
+###1.1.2.1.- Otra forma de instalación.
 Directamente desde el [repositorio de Odoo en GitHub][github_odoo]
 
 
@@ -94,7 +98,7 @@ Directamente desde el [repositorio de Odoo en GitHub][github_odoo]
 
 
 
-###1.1.4.- Resumen para GNU / Linux.
+###1.1.2.2.- Resumen.
 
 - [x]  **PostgreSQL + pgadmin3:** `sudo apt-get install postgresql pgadmin3`.  
 - [x]  Crear usuario **"odoo"**.  
